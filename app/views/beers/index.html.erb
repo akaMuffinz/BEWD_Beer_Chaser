@@ -1,0 +1,23 @@
+<!-- <form action="<%= beers_path %>" method="get">
+  Search: <input type="text" name="search">
+  <button>Submit</button>
+</form> -->
+<h1>Results</h1>
+
+<!--  <ul>
+  <% @results.each do |beer| %>
+    <li><h3><a href="/beers/<%= beer["id"] %>"><%= beer["name"] %></a></li></h3>
+  <% end %>
+ </ul> -->
+
+<table class="table table-hover">
+	<th>Brew</th>
+	<th>Brewery</th>
+		<tr>
+			<% @results.each do |beer| %>
+    			<td><h3><a href="/beers/<%= beer["id"] %>"><%= beer["name"] %></a></h3></td>
+    			<td><h4><%= beer['breweries'][0]["name"] %></h4></td>
+    	</tr>
+  <% end %>
+
+ </table>
