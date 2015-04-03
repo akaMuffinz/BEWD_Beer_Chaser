@@ -35,11 +35,12 @@ class BeersController < ApplicationController
     else
       @image_url = 'Logo.png'
     end
-    # @favorite = Favorite.find_by(beer_id: @result['id'])
 
-    # if !@favorite 
-    #   @favorite = Favorite.new(beer_id: @results['id'], name: @results['name'])
-    # end
+    @favorite = Favorite.find_by(beer_id: @result['id'])
+
+    if !@favorite 
+      @favorite = Favorite.new(beer_id: @result['id'], name: @result['name'])
+    end
   end
 
 end

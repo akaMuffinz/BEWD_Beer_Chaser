@@ -1,23 +1,28 @@
-<!-- <form action="<%= beers_path %>" method="get">
-  Search: <input type="text" name="search">
-  <button>Submit</button>
-</form> -->
-<h1>Results</h1>
+<% if @results.count > 0 %>
 
-<!--  <ul>
-  <% @results.each do |beer| %>
-    <li><h3><a href="/beers/<%= beer["id"] %>"><%= beer["name"] %></a></li></h3>
-  <% end %>
- </ul> -->
+	<div class="results_background">
 
-<table class="table table-hover">
-	<th>Brew</th>
-	<th>Brewery</th>
-		<tr>
-			<% @results.each do |beer| %>
-    			<td><h3><a href="/beers/<%= beer["id"] %>"><%= beer["name"] %></a></h3></td>
-    			<td><h4><%= beer['breweries'][0]["name"] %></h4></td>
-    	</tr>
-  <% end %>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th><h1><u>Brew</u></h1></th>
+					<th><h1><u>Brewery</u></h1></th>
+				</tr>
+			</thead>
+			<tbody>
+					<% @results.each do |beer| %>
+						<tr>
+		    				<td><h3><a href="/beers/<%= beer["id"] %>"><%= beer["name"] %></a></h3></td>
+		    				<td><h3><%= beer['breweries'][0]["name"] %></a></h3></td>
+		    			</tr>
+		  			<% end %>
+		  	</tbody>
+		 </table>
 
- </table>
+	</div>
+
+<% else %>
+
+	<div class="hero">GET YO' SEARCH ON!!!</div>
+
+<% end %>

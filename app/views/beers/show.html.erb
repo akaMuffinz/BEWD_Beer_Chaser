@@ -1,7 +1,66 @@
-<h1><%= @result['name'] %><small> by: <%= @result['breweries'][0]["name"] %></small></h1>
+<div class="show">
 
-<h4>Style: <small><%= @style_name %></small></h4>
+	<div class="center">
 
-<%= image_tag @image_url, :class =>"labels_image" %>
+		<div class="brew_name"><%= @result['name'] %></div>
+		<h3><%= @result['breweries'][0]["name"]%></h3>
+		<h4>Style: <small><%= @style_name %></small></h4>
+		<h5>ABV: <%= @result['abv'] %>%</h5>
 
-<h4>Description: <small><%= @description %></small></h4>
+	</div>
+
+	<br>
+	<br>
+
+	<%= image_tag @image_url, :class =>"labels_image" %>
+
+	<br><br><br><br>
+
+	<div class="fav_button">
+
+		<% if @favorite.new_record? %>
+
+		  <%= form_for @favorite do |f| %>
+		    <%= f.hidden_field :beer_id %>
+		    <%= f.hidden_field :name %>
+		    <%= f.submit "Favorite :)", :class =>"fav_write" %>
+		  <% end %>
+
+		<% else %>
+
+		
+		  <%= form_for @favorite, :method => :delete do |f| %>
+		    	<%= f.submit "Unfavorite :(", :class =>"fav_rewrite" %>
+		  <% end %>
+		
+		<% end %>
+
+	</div>
+
+<div class="clearfix"></div>
+
+
+<script type="text/javascript">$(".fav_rewrite").mouseover(function(){
+		this.value = "NOOOO!!! Please don't!!!!!";
+		this.className = "fav_rewrite no_fav"
+	});
+
+	$(".fav_rewrite").mouseleave(function(){
+		this.value = "Unfavorite :(";
+		this.className = "fav_rewrite"
+	});
+
+</script>
+
+	<div class="center">
+
+	<br>
+		<h3>
+			<u>Description</u>
+			<br>
+			<small><%= @description %></small>
+		</h3>
+
+	</div>
+
+</div>

@@ -1,7 +1,7 @@
 <h1>Favorites</h1>
 
  <ul>
-  <% @favorites.each do |favorite| %>
-    <li><a href="/beers/<%= favorite.beer_id %>"><%= favorite.name %></a></li>
+  <% @favorites.each do |fav| %>
+    <li class="favs"><h2><%= link_to fav.name, beer_path(fav.beer_id) %></h2></li>
   <% end %>
  </ul>

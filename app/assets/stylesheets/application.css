@@ -14,6 +14,159 @@
  *= require_self
  */
 
+body {
+	background: url(beer-background.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+th {
+	font-family: Bevan;
+}
+
+tr {
+	font-family: Bevan;
+}
+
+.center {
+	text-align: center;
+}
+
+.hero {
+	font-size: 140px;
+	font-family: Bevan;
+	color: white;
+	text-decoration: bold;
+	margin: 100px auto;
+	text-align: center;
+}
+
+a .navbar-brand {
+	color: black;
+}
+
+.navbar {
+    background: rgba(255,102,0,0.5);
+  }
+
+
+thead {
+    background: rgba(255,102,0,0.5);
+    color: white;
+  }
+
+.favs {
+	list-style: none;
+}
+
+.favs a {
+	color: white;
+	text-decoration: none;
+}
+
+.results_background{
+	background: rgba(0, 0, 0, 0.5);
+	margin: 0 auto;
+	width: 85%;
+}
+
 .labels_image {
 	border-radius: 25%;
+	width: 25%;
+	margin-left: 25%;
+	float: left;
 }
+
+.fav_button {
+	float: left;
+	margin: 0 5%;
+}
+
+.fav_write {
+	background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255,102,0,0.5);
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 6px;
+    font-family: Bevan;
+}
+
+.fav_write:hover {
+	background-color: rgba(255,102,0,0.5);
+    color: rgba(0, 0, 0, 1);
+}
+
+.show {
+	background: rgba(0, 0, 0, 0.5);
+	margin: 0 auto;
+	width: 75%;
+	color: white;
+	border-radius: 25px;
+	padding: 30px;
+}
+
+.show h3 small {
+	text-decoration: bold;
+	color: white;
+}
+
+.show h4 small {
+	color: white;
+}
+
+.show h1 small {
+	color: white;
+}
+
+.results_background a {
+	color: rgba(255,102,0,1);
+}
+
+tbody tr td h3 a:hover {
+	text-decoration: none;
+}
+
+table {
+	margin-top: 50px;
+}
+
+.fav_rewrite {
+	background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255,102,0,0.5);
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 6px;
+    font-family: Bevan;
+}
+
+.no_fav {
+	font-size: 22px;
+	font-weight: bold;
+	color: white;
+	background-color: rgba(255,102,0,1);
+	font-family: Bevan;
+}
+
+.navbar-nav {
+    font-family: Bevan;
+    font-size: 22px;
+}
+
+.navbar-nav:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255,102,0,0.5);
+    border-radius: 100%;
+}
+
+.show h1 small {
+	color: white;
+}
+
+.brew_name {
+	font-size: 75px;
+	font-family: Bevan;
+	margin-bottom: -20px;
+}
+
