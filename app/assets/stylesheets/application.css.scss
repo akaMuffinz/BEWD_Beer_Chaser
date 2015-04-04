@@ -57,12 +57,23 @@ thead {
     color: white;
   }
 
+.fav_head {
+	font-size: 4em;
+	font-family: Bevan;
+}
+
 .favs {
 	list-style: none;
+	font-family: Bevan;
 }
 
 .favs a {
 	color: white;
+	text-decoration: none;
+}
+
+.favs a:hover {
+	color: rgba(255,102,0,0.5);
 	text-decoration: none;
 }
 
