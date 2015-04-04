@@ -36,7 +36,7 @@ class BeersController < ApplicationController
       @image_url = 'Logo.png'
     end
 
-    @favorite = Favorite.find_by(beer_id: @result['id'])
+    @favorite = Favorite.where(user_id: current_user).find_by(beer_id: @result['id'])
 
     if !@favorite 
       @favorite = Favorite.new(beer_id: @result['id'], name: @result['name'])
