@@ -31,7 +31,7 @@ class BeersController < ApplicationController
     end
    
     if @result['labels']
-      @image_url = @result['labels']['medium']
+      @image_url = @result['labels']['large']
     else
       @image_url = 'Logo.png'
     end

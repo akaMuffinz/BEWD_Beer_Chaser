@@ -15,7 +15,9 @@
  */
 
 body {
-	background: url(beer-background.jpg) no-repeat center center fixed; 
+	background: #000 image-url('beer-background.jpg') no-repeat center center fixed;
+
+	background-color: rgba(0, 0, 0, 0.5);
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -39,7 +41,7 @@ tr {
 	font-family: Bevan;
 	color: white;
 	text-decoration: bold;
-	margin: 100px auto;
+	margin: 60px auto;
 	text-align: center;
 }
 
@@ -142,7 +144,7 @@ table {
 }
 
 .no_fav {
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: bold;
 	color: white;
 	background-color: rgba(255,102,0,1);

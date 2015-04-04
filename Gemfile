@@ -46,3 +46,4 @@ end
   gem 'pry-rails'
   gem 'httparty'
   gem 'devise'
+  gem 'rails_12factor', group: :production
